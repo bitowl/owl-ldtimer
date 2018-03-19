@@ -1,0 +1,35 @@
+{
+  "name": "owl-ldtimer",
+  "version": "0.0.0",
+  "description": "A timer for an event with a start and enddate",
+  "homepage": "",
+  "author": {
+    "name": "bitowl",
+    "email": "bitowl@bitowl.de",
+    "url": "https://bitowl.net"
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "~0.9.0",
+    "dashboardPanels": [
+      {
+        "name": "ld-timer",
+        "title": "LDTimer",
+        "width": 2,
+        "file": "ld-timer.html",
+        "headerColor": "#9f9bbd"
+      }
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "MIT"
+}
