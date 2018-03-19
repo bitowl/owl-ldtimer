@@ -1,0 +1,15 @@
+<link rel="import" href="../../../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../../../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../../../../bower_components/paper-button/paper-button.html">
+<dom-module id="owl-timer-dates">
+    <template strip-whitespace>
+        <style>
+            :host {
+            }
+        </style>
+        <paper-input type="datetime-local" value="{{startDate}}" id="startDate" label="start date"></paper-input>
+        <paper-input type="datetime-local" value="{{endDate}}" id="endDate" label="end date"></paper-input>
+        <paper-button on-tap="showMeThings" raised>Update</paper-button>
+    </template>
+    <script src="owl-timer-dates.js"></script>
+</dom-module>
