@@ -1,0 +1,9 @@
+{
+  "name": "owl-ldtimer",
+  "dependencies": {
+    "paper-button": "^2.0.0",
+    "datetime-input": "fooloomanzoo/datetime-input#^2.2.5",
+    "paper-styles": "^2.0.0",
+    "paper-input": "^2.2.0"
+  }
+}
