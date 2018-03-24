@@ -39,6 +39,11 @@ module.exports = function (nodecg) {
         var now = new Date();
         if (startDate !== null) {
             var timeUntilStart = startDate - now;
+            if (timeUntilStart >= 1000 * 60 * 60 * 48) {
+                // more than two days away
+                showDays(timerConf.value.startPrefix, timeUntilStart);
+                return;
+            }
             if (timeUntilStart >= 0) {
                 showTime(timerConf.value.startPrefix, timeUntilStart);
                 return;
@@ -62,6 +67,11 @@ module.exports = function (nodecg) {
         var hours = Math.floor( (t/(1000*60*60)) );
 
         ldTimer.value.text = prefix + doubleDigit(hours) + ':' + doubleDigit(minutes) + ':' + doubleDigit(seconds);
+    }
+
+    function showDays(prefix, t) {
+        var days = Math.floor( (t/(1000*60*60*24)) );
+        ldTimer.value.text = prefix + days + ' days';
     }
 
     function showFinishText() {

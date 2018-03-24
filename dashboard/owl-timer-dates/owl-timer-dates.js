@@ -22,7 +22,7 @@
 
         }
 
-        showMeThings() {
+        update() {
             timerConfig.value.startDate = this.$.startDate.value;
             timerConfig.value.endDate = this.$.endDate.value;
             timerConfig.value.finishText = this.$.finishText.value;
