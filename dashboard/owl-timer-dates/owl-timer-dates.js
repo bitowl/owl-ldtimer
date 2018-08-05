@@ -12,7 +12,6 @@
             super.ready();
             this.customText = 'initialText';
             timerConfig.on('change', newValue => {
-                console.log(newValue);
                 this.startDate = newValue.startDate;
                 this.endDate = newValue.endDate;
                 this.finishText = newValue.finishText;
