@@ -2,29 +2,34 @@
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../../bower_components/datetime-input/datetime-input.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="/dashboard/css/nodecg-theme.html">
+<link rel="import" href="/bundles/owl-nodecg-styles/dashboard/css/bitowl-theme.html">
 <dom-module id="owl-timer-dates">
     <template strip-whitespace>
-        <style>
+        <style include="bitowl-theme">
             :host {
             }
             #placeholder {
                 height: 400px;
             }
+            datetime-input {
+                border-bottom: 1px solid var(--default-primary-color);
+                width: 240px;
+            }
         </style>
         <paper-input label="start prefix" value="{{startPrefix}}" id="startPrefix"></paper-input>
-        start time
+
+        <span class="owl-label">start time</span>
         <datetime-input id="startDate" value="{{startDate}}" locale="de"></datetime-input>
 
         <paper-input label="end prefix" value="{{endPrefix}}" id="endPrefix"></paper-input>
-        <span class="floated-label-placeholder">
-
-
-         end time</span>
+        <span class="owl-label">end time</span>
         <datetime-input id="endDate" value="{{endDate}}" locale="de"></datetime-input>
         
 
         <paper-input label="finish text" value="{{finishText}}" id="finishText"></paper-input>
-        <paper-button on-tap="update" raised>Update</paper-button>
+        <paper-button on-tap="update" class="nodecg-configure"><iron-icon icon="icons:refresh"></iron-icon>&nbsp;Update</paper-button>
 
     </template>
     <script src="owl-timer-dates.js"></script>
